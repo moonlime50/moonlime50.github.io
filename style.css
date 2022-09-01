@@ -84,7 +84,7 @@ header.sticky ul li a, header.sticky .logo {
     position: relative;
     background: #F7F7F7;
     display: flex;
-    height: 35vh;
+    height: 65vh;
     justify-content: center; 
     align-items: center;
 }
