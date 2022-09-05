@@ -11,6 +11,7 @@
 body {
     background-color:#F7F7F7;
     min-height: 150vh;
+    position: relative;
 }
 header {
     position: fixed;
@@ -68,7 +69,6 @@ header ul li a:hover {
 }
 .banner {
     position: relative;
-
     width: 100%;
     background-color: #F7F7F7;
     min-height: 5vh;
@@ -82,15 +82,16 @@ header.sticky ul li a, header.sticky .logo {
 
 .main {
     position: relative;
-    background: #F7F7F7;
+    width: 100%;
     display: flex;
+    background: #F7F7F7;
     height: 65vh;
     justify-content: center; 
     align-items: center;
 }
 .main .title, .main .title1 {
     font-family: 'Poppins';
-    font-size: 75px;
+    font-size: 74px;
     margin: 10px;
 }
 .main .title {
@@ -132,6 +133,295 @@ header.sticky ul li a, header.sticky .logo {
     font-size: 16px;
     width: 100%;
 }
-.content ul li p:hover {
-    font-size: 18px;
+.slider {
+    position: relative;
+    min-height: 50vh;
+    width: 100%;
+    background-color: #fff;
+}
+
+
+.team {
+    padding: 100px;
+    position: relative;
+    min-height: 70vh;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+}
+.team h2 {
+    font-weight: 500;
+    font-size: 2.4rem;
+    position: relative;
+    left: calc(50% - 125px);
+    line-height: 1.8rem;
+}
+.card {
+    position: relative;
+    left: calc(50% - 250px);
+    margin-top: 100px;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 75px;
+    background: linear-gradient(135deg, #d41e31, #491f8f);
+    box-shadow: 10px 10px 14px 8px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    width: 600px
+}
+.card img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 450px;
+    transition: 0.5s;
+}
+.card:hover img {
+    left: 80%;
+    height: 550px;
+}
+.card .cardcontent {
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 50px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.card:hover .cardcontent {
+    opacity: 1;
+    visibility: visible;
+    left: 0%;
+}
+.card .cardcontent h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+.card .cardcontent p {
+    width: 350px;
+    color: #fff;
+}
+.card .cardcontent a {
+    position: relative;
+    display: inline-block;
+    color: #111;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+@media (max-width: 991px) {
+    .card {
+        position: relative;
+        width: auto;
+        max-width: 600px;
+        transition: 0.5s;
+        align-items: flex-start;
+    }
+    .card:hover {
+        height: 450px;
+    }
+    .card:hover img {
+        left: 50%;
+        height: 375px;
+    }
+    .card .cardcontent {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+} 
+@media (max-width: 420px) {
+    .card .cardcontent {
+        padding: 30px;
+    }
+    .card:hover img {
+        height: 325px;
+        left: 80%;
+    }
+}
+
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer .social_icon, footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+footer .social_icon li,  footer .menu li {
+    list-style: none;
+}
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon li a:hover {
+    transform: translateY(-10px);
+}
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+footer .menu li a:hover {
+    opacity: 1;
+}
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px
+    }
+}
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave2 4s linear infinite;
+}
+@keyframes animateWave2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px
+    }
+}
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 25px;
+    animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave2 3s linear infinite;
+}
+.empty {
+    min-height: 50vh;
+    background: #333;
+}
+
+.service {
+    padding: 100px 0;
+    font-family: 'Poppins', sans-serif;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 45px;
+    margin: auto;
+}
+.max-width h1 {
+    text-align: center;
+    position: relative;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.max-width h1::after {
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50% );
+}
+.sercontent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.sercard {
+    padding: 50px 25px; 
+    width: calc(26% - 20px);
+    border-radius: 6px;
+    background: #fff;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.5 ease;
+}
+.sercard:hover {
+    background-color: #dc143c;
+    color: #fff;
+}
+.box {
+    transform: all 0.3 ease;
+
+}
+
+.box i{
+    font-size: 50px;
+    color: #dc143c;
+    transform: color 0.3s ease;
+}
+.sercard:hover .box i{
+    color: #fff;
+}
+.box h3 {
+    font-size: 25px;
+    padding: 10px 0 7px;
+}
+@media screen and (max-width: 1190px) {
+    .max-width {
+        padding: 0 25px;
+    }
+    .sercard{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .sercard {
+        width: 100%;
+    }
 }
