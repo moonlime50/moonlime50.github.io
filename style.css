@@ -3,16 +3,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', monospace, sans-serif;
+    overflow: hidden;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: visible;
 }
 body {
-    background-color:#F7F7F7;
+    background-color:var(--off);
     min-height: 150vh;
     position: relative;
 }
+:root {
+    --black: #000;
+    --grey: #333;
+    --off: #F7F7F7;
+    --white: #fff;
+}
+.dark {
+    --white: #000;
+    --black: #fff;
+    --off: #F7F7F7;
+    --off: #333;
+    --grey: #F7F7F
+}
+
+/* ---------------------- H E A D E R  -----------------------*/
+
 header {
     position: fixed;
     top: 0;
@@ -21,17 +43,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: 0.6s;
+    transition: 0.4s;
     z-index: 1000000;
     padding: 40px 100px;
 }
 header.sticky { 
     padding: 15px 100px;
-    background-color: #000;
+    background-color: var(--black);
 }
 header .logo {
     position: relative;
-    color: #000;
+    color: var(--black);
     text-decoration: none;
 }
 header .logo img {
@@ -58,7 +80,7 @@ header ul li a {
     margin: 0 15px;
     font-size: 18px;
     text-decoration: none;
-    color: #000;
+    color: var(--black);
     letter-spacing: 2px;
     font-weight: 5750;
     transform: 0.5s;
@@ -67,24 +89,66 @@ header ul li a:hover {
     text-decoration: underline;
     transition: 0.6s;
 }
+header.sticky ul li a, header.sticky .logo {
+    color: var(--white);
+    font-size: 21px;
+    transition: 0.5s;
+}
 .banner {
     position: relative;
     width: 100%;
-    background-color: #F7F7F7;
+    background-color: var(--off);
     min-height: 5vh;
 }
-header.sticky ul li a, header.sticky .logo {
-    color: #fff;
-    font-size: 21px;
-    transition: 0.5s;
 
+.shift {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
+
+.rightSide {
+    display: flex;
+}
+.btns {
+    position: relative;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.btns ion-icon {
+    font-size: 2.5em;
+    color: var(--black);
+}
+header.sticky .btns ion-icon {
+    color: var(--white);
+}
+.btns.menuToggle ion-icon {
+    font-size: 3em;
+}
+
+.btns ion-icon:nth-child(2) {
+    display: none;
+}
+.btns.active ion-icon:nth-child(2) {
+    display: block;
+}
+.btns.active ion-icon:nth-child(1) {
+    display: none;
+}
+/* ---------------------- M A I N  -----------------------*/
 
 .main {
     position: relative;
     width: 100%;
     display: flex;
-    background: #F7F7F7;
+    background: var(--off);
     height: 65vh;
     justify-content: center; 
     align-items: center;
@@ -99,53 +163,126 @@ header.sticky ul li a, header.sticky .logo {
     padding: 0 15px;
     color: #fff;
 }
+.main .title1 {
+    padding: 0 15px;
+    color: #000;
+}
 .main .text {
     position: relative;
     justify-content: center;
     align-items: center;
+    color: var(--black);
 }
+.main .t1.active .title {
+    background-color: transparent;
+    color: #fff;
+}
+.main .t2.active .title1 {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* ---------------------- C O N T E N T  -----------------------*/
+
 .content {
     position: relative;
     min-height: 50vh;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--black);
+    color: var(--white);
     justify-content: center;
     align-items: center;
 }
-.content ul {
-    display : flex;
-    justify-content: center;
-    align-items: center;
+.content h3 {
+    padding: 50px;
+    font-size: 45px;
+    text-align: center;
 }
-.content ul li {
-    list-style: none;
-    margin: 100px;
+.content img {
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    border-radius: 20%;
 }
-.content ul li img {
-    width: 350px;
+.content img:hover {
+    opacity: 0.8;
 }
-
-.content ul li p {
+.content p {
     position: relative;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    width: 100%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    font-size: 20px;
+    text-align: center;
 }
-.slider {
+/* ----------------------------  S E R V I C E S  ------------------------ */
+
+.serv {
     position: relative;
     min-height: 50vh;
-    width: 100%;
-    background-color: #fff;
+    background-color: var(--grey);
+    margin: 0;
+    padding: 0;
+    z-index: 5;
 }
+.serv h1 {
+    font-size: 45px;
+    padding-top: 25px;
+    color: var(--white);
+    text-align: center;
+}
+
+.serv .carousel {
+    position: relative;
+    height: 600px;
+    perspective: 250px;
+
+}
+.serv .carousel .carousel-item {
+    width: 450px;
+    background: var(--white);
+    padding: 50px;
+    height: auto;
+    text-align:  center;
+    border-radius: 20px;
+}
+.serv .img-area {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: inset 8px deepskyblue;
+}
+.serv .img-area img{
+    width: 100%;
+}
+.serv .testi p {
+    color: --var(grey);
+    font-size: 18px;
+    line-height: 1.9;
+}
+.serv .testi h4 {
+    font-size: 20px;
+    margin: 0;
+    color: var(--black);
+}
+.serv .testi h5 {
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin: 7px 0;
+}
+/* ----------------- T E A M  ------------- */
 
 
 .team {
     padding: 100px;
     position: relative;
     min-height: 70vh;
-    background-color: #000;
+    background-color: var(--black);
     justify-content: center;
     align-items: center;
 }
@@ -155,7 +292,12 @@ header.sticky ul li a, header.sticky .logo {
     position: relative;
     left: calc(50% - 125px);
     line-height: 1.8rem;
+    color: var(--white)
 }
+
+
+/* -----------------  C A R D  ------------- */
+
 .card {
     position: relative;
     left: calc(50% - 250px);
@@ -169,9 +311,10 @@ header.sticky ul li a, header.sticky .logo {
     background: linear-gradient(135deg, #d41e31, #491f8f);
     box-shadow: 10px 10px 14px 8px rgba(0,0,0,0.5);
     transition: all 0.3s ease;
+    overflow: visible;
 }
 .card:hover {
-    width: 600px
+    width: 600px;
 }
 .card img {
     position: absolute;
@@ -189,7 +332,7 @@ header.sticky ul li a, header.sticky .logo {
     position: relative;
     width: 50%;
     left: 20%;
-    padding: 50px 20px 20px 40px;
+    padding: 0px 20px 20px 40px;
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
@@ -251,6 +394,16 @@ header.sticky ul li a, header.sticky .logo {
 }
 
 
+/* --------------------------- E M P T Y ---------------------------- */
+
+.empty {
+    min-height: 15vh;
+    background: var(--black);
+}
+
+/* ---------------------------- F O O T E R ------------------------ */
+
+
 footer {
     position: relative;
     width: 100%;
@@ -261,6 +414,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: visible;
 }
 footer .social_icon, footer .menu {
     position: relative;
@@ -343,85 +497,9 @@ footer .wave#wave4 {
     bottom: 20px;
     animation: animateWave2 3s linear infinite;
 }
-.empty {
-    min-height: 50vh;
-    background: #333;
-}
 
-.service {
-    padding: 100px 0;
-    font-family: 'Poppins', sans-serif;
-}
-.max-width {
-    max-width: 1300px;
-    padding: 0 45px;
-    margin: auto;
-}
-.max-width h1 {
-    text-align: center;
-    position: relative;
-    font-size: 50px;
-    font-weight: 500;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-}
-.max-width h1::after {
-    content: '';
-    position: absolute;
-    width: 180px;
-    height: 3px;
-    background: #fff;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50% );
-}
-.sercontent {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.sercard {
-    padding: 50px 25px; 
-    width: calc(26% - 20px);
-    border-radius: 6px;
-    background: #fff;
-    text-align: center;
-    user-select: none;
-    cursor: pointer;
-    transition: all 0.5 ease;
-}
-.sercard:hover {
-    background-color: #dc143c;
-    color: #fff;
-}
-.box {
-    transform: all 0.3 ease;
 
-}
 
-.box i{
-    font-size: 50px;
-    color: #dc143c;
-    transform: color 0.3s ease;
-}
-.sercard:hover .box i{
-    color: #fff;
-}
-.box h3 {
-    font-size: 25px;
-    padding: 10px 0 7px;
-}
-@media screen and (max-width: 1190px) {
-    .max-width {
-        padding: 0 25px;
-    }
-    .sercard{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
-}
-@media screen and (max-width: 700px) {
-    .sercard {
-        width: 100%;
-    }
-}
+/* ---------------------- E M P T Y ---------------------- */
+
+
