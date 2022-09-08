@@ -5,17 +5,6 @@ window.addEventListener("scroll", function () {
     logo.classList.toggle("scrolling", window.scrollY > 0);
 });
 
-
-$(document).ready(function(){
-    $('.carousel').carousel({
-        padding: 200
-    });
-    autoplay();
-    function autoplay() {
-        $('.carousel').carousel('next');
-        setTimeout(autoplay, 4500);
-    }
-});
 let dayNight = document.querySelector('.dayNight')
 let body = document.querySelector('body')
 let moon = document.querySelector('.t1')
@@ -27,3 +16,15 @@ dayNight.onclick = function() {
     moon.classList.toggle('active')
     lime.classList.toggle('active')
 }
+
+
+$(document).ready(function(){
+    $('.carousel').carousel({
+        padding: 200
+    });
+    autoplay();
+    function autoplay() {
+        $('.carousel').carousel('next');
+        setTimeout(autoplay, 4500);
+    }
+});
