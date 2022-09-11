@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', monospace, sans-serif;
+    overflow: hidden;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: visible;
+}
+body {
+    background-color:var(--off);
+    min-height: 150vh;
+    position: relative;
+}
+:root {
+    --black: #000;
+    --grey: #333;
+    --off: #F7F7F7;
+    --white: #fff;
+    --coco: #3f3752;
+}
+.dark {
+    --white: #000;
+    --black: #fff;
+    --off: #F7F7F7;
+    --off: #333;
+    --grey: #F7F7F7;
+    --coco: #000;
+}
+
+/* ---------------------- H E A D E R  -----------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s;
+    z-index: 1000000;
+    padding: 40px 100px;
+}
+header.sticky { 
+    padding: 15px 100px;
+    background-color: var(--black);
+    opacity: 0.7;
+}
+header .logo {
+    position: relative;
+    color: var(--black);
+    text-decoration: none;
+}
+header .logo img {
+
+  width: 50px;
+  opacity: 0;
+  z-index: 1000;
+}
+header .logodiv.scrolling img {
+    opacity: 1;
+}
+header ul {
+    position: relative;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li {
+    position: relative;
+    list-style: none;
+}
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--black);
+    letter-spacing: 2px;
+    font-weight: 5750;
+    transform: 0.5s;
+}
+header ul li a:hover {
+    text-decoration: underline;
+    transition: 0.6s;
+}
+header.sticky ul li a, header.sticky .logo {
+    color: var(--white);
+    font-size: 21px;
+    transition: 0.5s;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    background-color: var(--off);
+    min-height: 5vh;
+}
+
+.shift {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.rightSide {
+    display: flex;
+}
+.btns {
+    position: relative;
+    left: calc(50% - 25px);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.btns ion-icon {
+    font-size: 2.0em;
+
+    color: var(--black);
+}
+header.sticky .btns ion-icon {
+    color: var(--white);
+}
+.btns.menuToggle ion-icon {
+    font-size: 3em;
+}
+
+.btns ion-icon:nth-child(2) {
+    display: none;
+}
+.btns.active ion-icon:nth-child(2) {
+    display: block;
+}
+.btns.active ion-icon:nth-child(1) {
+    display: none;
+}
+/* ---------------------- M A I N  -----------------------*/
+
+.main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background: var(--off);
+    height: 65vh;
+    justify-content: center; 
+    align-items: center;
+}
+.main .title, .main .title1 {
+    font-family: 'Poppins';
+    font-size: 74px;
+    margin: 10px;
+}
+.main .title {
+    background-color: #000;
+    padding: 0 15px;
+    color: #fff;
+}
+.main .title1 {
+    padding: 0 15px;
+    color: #000;
+}
+.main .text {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+}
+.main .t1.active .title {
+    background-color: transparent;
+    color: #fff;
+}
+.main .t2.active .title1 {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* ---------------------- C O N T E N T  -----------------------*/
+
+.content {
+    position: relative;
+    min-height: 50vh;
+    background-color: var(--black);
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+}
+.content h3 {
+    padding: 50px;
+    font-size: 45px;
+    text-align: center;
+}
+.content img {
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    border-radius: 20%;
+}
+.content img:hover {
+    opacity: 0.8;
+}
+.content p {
+    position: relative;
+    width: 60%;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+/* ----------------------------  I T E M S  ------------------------ */
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    background: var(--coco);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.itemstitle {
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    background: var(--coco);
+    color: #fff;
+
+}
+
+.items .Scontainer {
+    position: relative;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: 35px;
+}
+.items .Scontainer .serviceBox { 
+    position: relative;
+    width: 350px;
+    height: 280px;
+    background: #51446e;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.items .Scontainer .serviceBox .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--i);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition-delay: 0s;
+}
+.items .Scontainer .serviceBox:hover .icon {
+    top: 30px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition-delay: 0.25s;
+}
+.items .Scontainer .serviceBox .icon ion-icon {
+    font-size: 5em;
+    color: #fff;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.items .Scontainer .serviceBox:hover .icon ion-icon {
+    font-size: 2em;
+    transition-delay: 0.25s;
+}
+.items .Scontainer .serviceBox .Scontent {
+    position: relative;
+    padding: 20px;
+    color: #fff;
+    margin-top: 100px;
+    z-index: 1;
+    text-align: center;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.items .Scontainer .serviceBox:hover .Scontent {
+    transform: scale(1);
+    transition-delay: 0.25s;
+}
+.items .Scontainer .serviceBox .Scontent h2 {
+    margin-top: 10px;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+.items .Scontainer .serviceBox .Scontent p {
+    font-weight: 300;
+    line-height: 1.5em;
+}
+/* ----------------------------  S E R V I C E S  ------------------------ */
+
+.serv {
+    position: relative;
+    min-height: 50vh;
+    background-color: var(--off);
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+}
+.serv h1 {
+    font-size: 45px;
+    padding-top: 25px;
+    color: var(--black);
+    text-align: center;
+}
+
+.serv .carousel {
+    position: relative;
+    height: 600px;
+    perspective: 250px;
+
+}
+.serv .carousel .carousel-item {
+    width: 450px;
+    background: var(--black);
+    padding: 50px;
+    height: auto;
+    text-align:  center;
+    border-radius: 20px;
+}
+.serv .img-area {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: inset 8px deepskyblue;
+}
+.serv .img-area img{
+    width: 100%;
+}
+.serv .testi p {
+    color: var(--white);
+    font-size: 18px;
+    line-height: 1.9;
+}
+.serv .testi h4 {
+    font-size: 20px;
+    margin: 0;
+    color: var(--black);
+}
+.serv .testi h5 {
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin: 7px 0;
+}
+/* ----------------- T E A M  ------------- */
+
+
+.team {
+    padding: 100px;
+    position: relative;
+    min-height: 70vh;
+    background-color: var(--black);
+    justify-content: center;
+    align-items: center;
+}
+.team h1 {
+    font-size: 45px;
+    padding-top: 25px;
+    color: var(--white);
+    text-align: center;
+}
+
+
+/* -----------------  C A R D  ------------- */
+
+.card {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 500px;
+    height: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 75px;
+    background: linear-gradient(135deg, #d41e31, #491f8f);
+    box-shadow: 10px 10px 14px 8px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+    overflow: visible;
+}
+.card:hover {
+    width: 600px;
+}
+.card img {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 450px;
+    transition: 0.5s;
+}
+.card:hover img {
+    left: 80%;
+    height: 550px;
+}
+.card .cardcontent {
+    position: relative;
+    width: 75%;
+    left: 20%;
+    height: 325px;
+    padding: 20px 50px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+}
+.card:hover .cardcontent {
+    opacity: 1;
+    visibility: visible;
+    left: 0%;
+}
+.card .cardcontent h2 {
+    margin-left: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    line-height: 1em;
+    text-align: left;
+}
+.card .cardcontent p {
+    width: 350px;
+    color: #fff;
+    padding-left: 20px;
+}
+.card .cardcontent a {
+    position: relative;
+    display: inline-block;
+    color: #111;
+    margin-left: 20px;
+
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    
+}
+@media (max-width: 991px) {
+    .card {
+        position: relative;
+        width: auto;
+        max-width: 600px;
+        transition: 0.5s;
+        align-items: flex-start;
+    }
+    .card:hover {
+        height: 450px;
+    }
+    .card:hover img {
+        left: 50%;
+        height: 325px;
+    }
+    .card .cardcontent {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+} 
+@media (max-width: 420px) {
+    .card .cardcontent {
+        padding: 30px;
+    }
+    .card:hover img {
+        height: 325px;
+        left: 80%;
+    }
+}
+
+
+/* --------------------------- E M P T Y ---------------------------- */
+
+.empty {
+    min-height: 15vh;
+    background: var(--black);
+}
+
+/* ---------------------------- F O O T E R ------------------------ */
+
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: visible;
+}
+footer .social_icon, footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+footer .social_icon li,  footer .menu li {
+    list-style: none;
+}
+footer .social_icon li a {
+    font-size: 2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social_icon li a:hover {
+    transform: translateY(-10px);
+}
+footer .menu li a {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    text-decoration: none;
+    opacity: 0.75;
+}
+footer .menu li a:hover {
+    opacity: 1;
+}
+footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px
+    }
+}
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave2 4s linear infinite;
+}
+@keyframes animateWave2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px
+    }
+}
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 25px;
+    animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave2 3s linear infinite;
+}
+
+
+
+/* ---------------------- E M P T Y ---------------------- */
+
+
