@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color:#000;
+    min-height: 150vh;
+
+}
+:root {
+    --black: #000;
+    --grey: #333;
+    --off: #F7F7F7;
+    --white: #fff;
+    --coco: #3f3752;
+}
+.dark {
+    --white: #000;
+    --black: #fff;
+    --off: #F7F7F7;
+    --off: #333;
+    --grey: #F7F7F7;
+    --coco: #000;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    background-color: var(--grey);
+    min-height: 5vh;
+}
+header ul li a,.btns ion-icon {
+
+    color: var(--off);
+}
+.main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    background: var(--grey);
+    height: 60vh;
+    justify-content: center; 
+    align-items: center;
+}
+.main .title, .main .title1 {
+    font-family: 'Poppins';
+    font-size: 74px;
+    margin: 10px;
+}
+.main .title {
+    background-color: var(--white);
+    padding: 0 15px;
+    color: var(--grey);
+}
+.main .title1 {
+    padding: 0 15px;
+    color: var(--white);
+}
+.main .text {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+}
+header.sticky { 
+    padding: 15px 100px;
+    background-color: var(--white);
+    opacity: 0.7;
+}
+.main .t1.active .title {
+    background-color: transparent;
+    color: #000;
+}
+.main .t2.active .title1 {
+    background-color: #000;
+    color: #F7F7F7;
+}
+
+.projs {
+    position: relative;
+    display: flex;
+    min-height: 65vh;
+    top: 0px;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 25px;
+}
+.projtitll {
+    position: relative;
+    min-height: 5vh;
+    top: 0px;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 25px;
+    text-align: center;
+}
+
+
+.projs ul {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    white-space: nowrap;
+    overflow: scroll;
+}
+.projs ul li {
+    display: inline-block;
+    list-style: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.projs ul li img {
+    height: 450px;
+}
+
+
+/* --------------- scroll bar -----------------------------*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+

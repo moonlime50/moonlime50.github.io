@@ -237,9 +237,10 @@ header.sticky .btns ion-icon {
     padding-bottom: 25px;
 }
 .itemstitle {
-    display: flex;
-    height: 150px;
+
+    height: 20vh;
     justify-content: center;
+    text-align: center;
     align-items: center;
     background: var(--coco);
     color: #fff;
@@ -292,7 +293,7 @@ header.sticky .btns ion-icon {
     transition-delay: 0s;
 }
 .items .Scontainer .serviceBox:hover .icon ion-icon {
-    font-size: 2em;
+    font-size: 1.8em;
     transition-delay: 0.25s;
 }
 .items .Scontainer .serviceBox .Scontent {
@@ -303,7 +304,7 @@ header.sticky .btns ion-icon {
     z-index: 1;
     text-align: center;
     transform: scale(0);
-    transition: 0.5s;
+    transition: 0.25s;
     transition-delay: 0s;
 }
 .items .Scontainer .serviceBox:hover .Scontent {
@@ -383,7 +384,7 @@ header.sticky .btns ion-icon {
     padding: 100px;
     position: relative;
     min-height: 70vh;
-    background-color: var(--black);
+    background-color: var(--grey);
     justify-content: center;
     align-items: center;
 }
@@ -505,7 +506,7 @@ header.sticky .btns ion-icon {
 
 .empty {
     min-height: 15vh;
-    background: var(--black);
+    background: var(--grey);
 }
 
 /* ---------------------------- F O O T E R ------------------------ */
