@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(#2a2c0a, #4c64b1);
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 60px 75px;
+    z-index: 1000;
+}
+header.sticky {
+    padding: 30px 100px;
+
+
+}
+header .logo {
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header ul li {
+    position: relative;
+    padding-top: 5px;
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    padding: 6px 15px;
+    color: white;
+    border-radius: 20px;
+    scroll-behavior: smooth;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    font-size: 1.2em;
+}
+header ul li a:hover, header ul li a.active {
+    background: white;
+    color: #2b1055;
+
+}
+
+@media (max-width: 775px) {
+    header .logo {
+        font-size: 1.5em;
+    }
+    header ul {
+        flex-wrap: wrap;
+    }
+    header ul li { 
+        padding: 10px;
+    }
+    header ul li a{
+        font-size: 1.0em;
+    }
+}
+
+
+
+
+
+
+
+.sec1
+{
+    position: relative;
+    height: 60vh;
+    padding: 75px;
+    padding-top: 175px;
+    background: #8d2da5;
+
+    justify-content: center;
+    align-items: center;
+}
+.sec1 h3{
+
+    color: white;
+    font-size: 2.2em;
+    font-weight: 500;
+    text-align: center;
+    padding: 70px;
+}
+.sec1 h4 {
+    color: white;
+    font-size: 1.6em;
+    font-weight: 450;
+    text-align: center;
+    padding: 30px;
+}
+.sec1 p {
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+}
+.sec1 a {
+    text-decoration: none;
+    color: white;
+}
+.sec1 a:hover {
+    text-decoration: underline;
+}
+
+.sec1 img {
+    position: relative;
+    left: 50%;
+
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    background: #fff;
+    border-radius: 20px;
+
+
+
+}
+
+
+
+
+
+
+.sec2
+{
+    position: relative;
+    padding: 100px;
+    background: #1c0612;
+    color: white;
+    text-align: center;
+    
+}
+.sec2 h3{
+    color: white;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 60px;
+
+}
+.sec2 p {
+    font-size: 1.1em;
+    line-height: 1.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sec3
+{
+    position: relative;
+    padding: 50px;
+    background: #1c0532;
+}
+.sec3 h2{
+    color: white;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+.sec3 p {
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+
+
+.footer-col{
+    width: 100%;
+    padding: 0 15px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+ }
+ .footer-col h4{
+     font-size: 18px;
+     color: #ffffff;
+     text-transform: capitalize;
+     margin-bottom: 35px;
+     font-weight: 500;
+     position: relative;
+ }
+ .footer-col h4::before{
+     content: '';
+     position: absolute;
+
+     bottom: -10px;
+     background-color: #e91e63;
+     height: 2px;
+     box-sizing: border-box;
+     width: 50px;
+ }
+ .footer-col ul li:not(:last-child){
+     margin-bottom: 10px;
+ }
+ .footer-col ul li a{
+     font-size: 20px;
+     text-transform: capitalize;
+     color: #ffffff;
+     text-decoration: none;
+     font-weight: 300;
+     color: #bbbbbb;
+     display: block;
+     transition: all 0.3s ease;
+ }
+ .footer-col ul li a:hover{
+     color: #ffffff;
+     padding-left: 8px;
+ }
+ .footer-col .social-links a{
+     display: inline-block;
+     font-size: 35px;
+     height: 60px;
+     width: 60px;
+
+     margin:0 10px 10px 0;
+     text-align: center;
+     line-height: 50px;
+     border-radius: 50%;
+     color: #ffffff;
+     transition: all 0.5s ease;
+ }
+ .footer-col .social-links a:hover{
+     color: #24262b;
+     background-color: #ffffff;
+ }
+
+
+
+
+
+
+
+
